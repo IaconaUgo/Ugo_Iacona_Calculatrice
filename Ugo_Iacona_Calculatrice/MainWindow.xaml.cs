@@ -25,164 +25,164 @@ namespace Ugo_Iacona_Calculatrice
         {
             InitializeComponent();
         }
-        double first_num;
-        double second_num;
-        double result; 
-        char operation;
+        double first_num;// declare la variable double qui ce nomme first_num
+        double second_num;// declare la variable double qui ce nomme second_num
+        double result; // declare la variable double qui ce nomme result
+        char operation;// declare la variable char qui ce nomme operation
 
-        private void BTN_1_Click(object sender, RoutedEventArgs e)
+        private void BTN_1_Click(object sender, RoutedEventArgs e)// partie accessible seulement grace a cette classe, elle execute le code BTN_1_Click et ca nous donne l'information quand le bouton a été cliquer
         {
-            display("1");
+            display("1");// le bouton 1 = 1
         }
 
-        private void BTN_2_Click(object sender, RoutedEventArgs e)
+        private void BTN_2_Click(object sender, RoutedEventArgs e)// partie accessible seulement grace a cette classe, elle execute le code BTN_2_Click et ca nous donne l'information quand le bouton a été cliquer
         {
-            display("2");
+            display("2");// bouton 2 = 2
         }
 
-        private void BTN_3_Click(object sender, RoutedEventArgs e)
+        private void BTN_3_Click(object sender, RoutedEventArgs e)// partie accessible seulement grace a cette classe, elle execute le code BTN_3_Click et ca nous donne l'information quand le bouton a été cliquer
         {
-            display("3");
+            display("3");// bouton 3 = 3
         }
 
-        private void BTN_4_Click(object sender, RoutedEventArgs e)
+        private void BTN_4_Click(object sender, RoutedEventArgs e)// partie accessible seulement grace a cette classe, elle execute le code BTN_4_Click et ca nous donne l'information quand le bouton a été cliquer
         {
-            display("4");
+            display("4");// bouton 4 = 4
         }
 
-        private void BTN_5_Click(object sender, RoutedEventArgs e)
+        private void BTN_5_Click(object sender, RoutedEventArgs e)// partie accessible seulement grace a cette classe, elle execute le code BTN_5_Click et ca nous donne l'information quand le bouton a été cliquer
         {
-            display("5");
+            display("5");// bouton 5 = 5
         }
 
-        private void BTN_6_Click(object sender, RoutedEventArgs e)
+        private void BTN_6_Click(object sender, RoutedEventArgs e)// partie accessible seulement grace a cette classe, elle execute le code BTN_6_Click et ca nous donne l'information quand le bouton a été cliquer
         {
-            display("6");
+            display("6");// bouton 6 = 6
         }
 
-        private void BTN_7_Click(object sender, RoutedEventArgs e)
+        private void BTN_7_Click(object sender, RoutedEventArgs e)// partie accessible seulement grace a cette classe, elle execute le code de BTN_7_Click et ca nous donne l'information quand le bouton a été cliquer
         {
-            display("7");
+            display("7");// bouton 7 = 7
         }
 
-        private void BTN_8_Click(object sender, RoutedEventArgs e)
+        private void BTN_8_Click(object sender, RoutedEventArgs e)// partie accessible seulement grace a cette classe, elle execute le codede BTN_8_Click et ca nous donne l'information quand le bouton a été cliquer
         {
-            display("8");
+            display("8");// bouton 8 = 8
         }
 
-        private void BTN_9_Click(object sender, RoutedEventArgs e)
+        private void BTN_9_Click(object sender, RoutedEventArgs e)// partie accessible seulement grace a cette classe, elle execute le code de BTN_9_Click et ca nous donne l'information quand le bouton a été cliquer
         {
-            display("9");
+            display("9");// bouton 9 = 9
         }
 
-        private void BTN_0_Click(object sender, RoutedEventArgs e)
+        private void BTN_0_Click(object sender, RoutedEventArgs e)// partie accessible seulement grace a cette classe, elle execute le code de BTN_0_Click et ca nous donne l'information quand le bouton a été cliquer
         {
-            display("0");
+            display("0");// bouton 0 = 0
         }
 
-        private void BTN_Plus_Click(object sender, RoutedEventArgs e)
+        private void BTN_Plus_Click(object sender, RoutedEventArgs e)// partie accessible seulement grace a cette classe, elle execute le code de BTN_Plus_Click et ca nous donne l'information quand le bouton a été cliquer
         {
-            first_num = double.Parse(TB_Display.Text);
-            TB_Display.Text = "0";
-            operation = '+';
+            first_num = double.Parse(TB_Display.Text);//valeur textuelle contenue dans une zone de texte est convertie en un nombre décimal et stockée dans la variable first_num
+            TB_Display.Text = "0";// le contenue textuelle affiche 0
+            operation = '+';// on utiliser + pour ce code
         }
     
 
-        private void BTN_Moins_Click(object sender, RoutedEventArgs e)
+        private void BTN_Moins_Click(object sender, RoutedEventArgs e)// partie accessible seulement grace a cette classe, elle execute le code de BTN_Moins_Click et ca nous donne l'information quand le bouton a été cliquer
         {
-            first_num = double.Parse(TB_Display.Text);
-            TB_Display.Text = "0";
-            operation = '-';
+            first_num = double.Parse(TB_Display.Text);//valeur textuelle contenue dans une zone de texte est convertie en un nombre décimal et stockée dans la variable first_num
+            TB_Display.Text = "0";// le contenue textuelle affiche 0
+            operation = '-';// on utiliser - pour ce code
         }
 
-        private void BTN_Multi_Click(object sender, RoutedEventArgs e)
+        private void BTN_Multi_Click(object sender, RoutedEventArgs e)// partie accessible seulement grace a cette classe, elle execute le code de BTN_Multi_Click et ca nous donne l'information quand le bouton a été cliquer
         {
-            first_num = double.Parse(TB_Display.Text);
-            TB_Display.Text = "0";
-            operation = '*';
+            first_num = double.Parse(TB_Display.Text);//valeur textuelle contenue dans une zone de texte est convertie en un nombre décimal et stockée dans la variable first_num
+            TB_Display.Text = "0";// le contenue textuelle affiche 0
+            operation = '*';// on utiliser * pour ce code
         }
 
-        private void BTN_Div_Click(object sender, RoutedEventArgs e)
+        private void BTN_Div_Click(object sender, RoutedEventArgs e)// partie accessible seulement grace a cette classe, elle execute le code de BTN_Div_Click et ca nous donne l'information quand le bouton a été cliquer
         {
-            first_num = double.Parse(TB_Display.Text);
-            TB_Display.Text = "0";
-            operation = '/';
+            first_num = double.Parse(TB_Display.Text);// premier numero pris en compte par la variable double
+            TB_Display.Text = "0";// le contenue textuelle affiche 0
+            operation = '/';// on utiliser / pour ce code
         }
-        private void BTN_Cos_Click(object sender, RoutedEventArgs e)
+        private void BTN_Cos_Click(object sender, RoutedEventArgs e)// partie accessible seulement grace a cette classe, elle execute le code de BTN_Cos_Click et ca nous donne l'information quand le bouton a été cliquer
         {
-            first_num = double.Parse(TB_Display.Text);
+            first_num = double.Parse(TB_Display.Text);// premier numero pris en compte par la variable double et convertie en decimale
 
-            result = Math.Cos(first_num);
+            result = Math.Cos(first_num);//resultat utilise la fonction Math pour calculer Cos sur le premier numero
 
-            TB_Display.Text = result.ToString();
-         
+            TB_Display.Text = result.ToString();// resultat dans la zone de texte
+
         }
-        private void BTN_Sin_Click(object sender, RoutedEventArgs e)
+        private void BTN_Sin_Click(object sender, RoutedEventArgs e)// partie accessible seulement grace a cette classe, elle execute le code de BTN_Sin_Click et ca nous donne l'information quand le bouton a été cliquer
         {
-            first_num = double.Parse(TB_Display.Text);
+            first_num = double.Parse(TB_Display.Text);//valeur textuelle contenue dans une zone de texte est convertie en un nombre décimal et stockée dans la variable first_num
 
-            result = Math.Sin(first_num);
-            TB_Display.Text = result.ToString();
+            result = Math.Sin(first_num);//resultat utilise la fonction Math pour calculer Sin sur le premier numero
+            TB_Display.Text = result.ToString();// resultat dans la zone de texte
             
         }
-            private void BTN_Tan_Click(object sender, RoutedEventArgs e)
+            private void BTN_Tan_Click(object sender, RoutedEventArgs e)// partie accessible seulement grace a cette classe, elle execute le code
         {
             first_num = double.Parse(TB_Display.Text);// premier numero pris en compte par la variable double 
 
-            result = Math.Tan(first_num); //le resultat du premier numeros pris en compte par la fonction Tan
+            result = Math.Tan(first_num); //resultat utilise la fonction Math pour calculer Tan sur le premier numero
             TB_Display.Text = result.ToString();//ecrire le resultat en caractères 
         }
-        private void BTN_Racinecaree_Click(object sender, RoutedEventArgs e)
+        private void BTN_Racinecaree_Click(object sender, RoutedEventArgs e)// partie accessible seulement grace a cette classe, elle execute le code
         {
-            first_num = double.Parse(TB_Display.Text);
+            first_num = double.Parse(TB_Display.Text);//valeur textuelle contenue dans une zone de texte est convertie en un nombre décimal et stockée dans la variable first_num
             TB_Display.Text = "√";
-            operation = 'R';
+            operation = 'R';// on utiliser / pour ce code
         }
 
-        private void BTN_result_Click(object sender, RoutedEventArgs e)
+        private void BTN_result_Click(object sender, RoutedEventArgs e)// partie accessible seulement grace a cette classe, elle execute le code
         {
-            second_num = double.Parse(TB_Display.Text);
+            second_num = double.Parse(TB_Display.Text);//valeur textuelle contenue dans une zone de texte est convertie en un nombre décimal et stockée dans la variable second_num
             switch (operation)
             {
-                case '+':
-                    result = first_num + second_num;
-                    TB_Display.Text = result.ToString();
-                    break;
+                case '+':// case +
+                    result = first_num + second_num;// result prend la valeur du premier numero plus le second numero
+                    TB_Display.Text = result.ToString();// ecrire le resultat dans la zone de texte
+                    break; //fin de case 
 
                 case '-':
-                    result = first_num - second_num;
-                    TB_Display.Text = result.ToString();
-                    break;
+                    result = first_num - second_num;// resultat est egale au premier numero taper soustrait au second
+                    TB_Display.Text = result.ToString();// ecrire le resultat dans la zone de texte
+                    break;//fin de case 
 
                 case '*':
-                    result = first_num * second_num;
-                    TB_Display.Text = result.ToString();
-                    break;
+                    result = first_num * second_num;// resultat est egale au premier numero taper multiplie au second
+                    TB_Display.Text = result.ToString();// ecrire le resultat dans la zone de texte
+                    break;//fin de case 
 
                 case '/':
-                    result = first_num / second_num;
-                    TB_Display.Text = result.ToString();
-                    break;
+                    result = first_num / second_num;// resultat est egale au premier numero taper divise au second
+                    TB_Display.Text = result.ToString();// ecrire le resultat dans la zone de texte
+                    break;//fin de case 
 
-                case 'C':
-                    result = first_num - second_num;
-                    TB_Display.Text = result.ToString();
-                    break;
+                case 'C':// cette action sera effectuer si C est utliser
+                    result = first_num - second_num;// resultat est egale au premier numero taper calculer avec Cos au second
+                    TB_Display.Text = result.ToString();// ecrire le resultat dans la zone de texte
+                    break;//fin de case 
 
                 case 'S':
-                    result = first_num - second_num;
-                    TB_Display.Text = result.ToString();
-                    break;
+                    result = first_num - second_num;// resultat est egale au premier numero taper calculer avec Sin au second
+                    TB_Display.Text = result.ToString();// ecrire le resultat dans la zone de texte
+                    break;//fin de case 
 
                 case 'T':
-                    result = first_num - second_num;
-                    TB_Display.Text = result.ToString();
-                    break;
+                    result = first_num - second_num;// resultat est egale au premier numero taper calculer avec Tan au second
+                    TB_Display.Text = result.ToString();// ecrire le resultat dans la zone de texte
+                    break;//fin de case 
 
                 case 'R'://case R
                     result = first_num - second_num;//result prend la velur du premier numero - le second numero
-                    TB_Display.Text = result.ToString();//la fonction transforme le resultat avec des caracteres 
-                    break;//arreter
+                    TB_Display.Text = result.ToString();// ecrire le resultat dans la zone de texte 
+                    break;//fin de case 
             }
         }
 
