@@ -71,7 +71,7 @@
 
 
 
-        <TextBlock Grid.Row="0" Grid.Column="4" Name="TB_Display"></TextBlock>
+        <TextBlock Grid.Row="0" Grid.Column="4" Name="TB_Display" FontSize="38"></TextBlock>
         <Button Grid.Row="1" Grid.Column="0" Name="BTN_Cos" Style="{StaticResource MyStyle}" Content="cos0" Click="BTN_Cos_Click" />
         <Button Grid.Row="1" Grid.Column="1" Name="BTN_Sin" Style="{StaticResource MyStyle}" Content="sin0" Click="BTN_Sin_Click" />
         <Button Grid.Row="1" Grid.Column="2" Name="BTN_Tan" Style="{StaticResource MyStyle}" Content="tan0" Click="BTN_Tan_Click" />

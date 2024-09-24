@@ -25,9 +25,9 @@ namespace Ugo_Iacona_Calculatrice
         {
             InitializeComponent();
         }
-        int first_num;
-        int second_num;
-        int result; 
+        double first_num;
+        double second_num;
+        double result; 
         char operation;
 
         private void BTN_1_Click(object sender, RoutedEventArgs e)
@@ -82,7 +82,7 @@ namespace Ugo_Iacona_Calculatrice
 
         private void BTN_Plus_Click(object sender, RoutedEventArgs e)
         {
-            first_num = Int32.Parse(TB_Display.Text);
+            first_num = double.Parse(TB_Display.Text);
             TB_Display.Text = "0";
             operation = '+';
         }
@@ -90,52 +90,58 @@ namespace Ugo_Iacona_Calculatrice
 
         private void BTN_Moins_Click(object sender, RoutedEventArgs e)
         {
-            first_num = Int32.Parse(TB_Display.Text);
+            first_num = double.Parse(TB_Display.Text);
             TB_Display.Text = "0";
             operation = '-';
         }
 
         private void BTN_Multi_Click(object sender, RoutedEventArgs e)
         {
-            first_num = Int32.Parse(TB_Display.Text);
+            first_num = double.Parse(TB_Display.Text);
             TB_Display.Text = "0";
             operation = '*';
         }
 
         private void BTN_Div_Click(object sender, RoutedEventArgs e)
         {
-            first_num = Int32.Parse(TB_Display.Text);
+            first_num = double.Parse(TB_Display.Text);
             TB_Display.Text = "0";
             operation = '/';
         }
         private void BTN_Cos_Click(object sender, RoutedEventArgs e)
         {
-            first_num = Int32.Parse(TB_Display.Text);
-            TB_Display.Text = "Cos";
-            operation = 'C';
+            first_num = double.Parse(TB_Display.Text);
+
+            result = Math.Cos(first_num);
+
+            TB_Display.Text = result.ToString();
+         
         }
         private void BTN_Sin_Click(object sender, RoutedEventArgs e)
         {
-            first_num = Int32.Parse(TB_Display.Text);
-            TB_Display.Text = "Sin";
-            operation = 'S';
+            first_num = double.Parse(TB_Display.Text);
+
+            result = Math.Sin(first_num);
+            TB_Display.Text = result.ToString();
+            
         }
             private void BTN_Tan_Click(object sender, RoutedEventArgs e)
         {
-            first_num = Int32.Parse(TB_Display.Text);
-            TB_Display.Text = "TAN";
-            operation = 'T';
+            first_num = double.Parse(TB_Display.Text);// premier numero pris en compte par la variable double 
+
+            result = Math.Tan(first_num); //le resultat du premier numeros pris en compte par la fonction Tan
+            TB_Display.Text = result.ToString();//ecrire le resultat en caractères 
         }
         private void BTN_Racinecaree_Click(object sender, RoutedEventArgs e)
         {
-            first_num = Int32.Parse(TB_Display.Text);
+            first_num = double.Parse(TB_Display.Text);
             TB_Display.Text = "√";
             operation = 'R';
         }
 
         private void BTN_result_Click(object sender, RoutedEventArgs e)
         {
-            second_num = Int32.Parse(TB_Display.Text);
+            second_num = double.Parse(TB_Display.Text);
             switch (operation)
             {
                 case '+':
@@ -173,27 +179,27 @@ namespace Ugo_Iacona_Calculatrice
                     TB_Display.Text = result.ToString();
                     break;
 
-                case 'R':
-                    result = first_num - second_num;
-                    TB_Display.Text = result.ToString();
-                    break;
+                case 'R'://case R
+                    result = first_num - second_num;//result prend la velur du premier numero - le second numero
+                    TB_Display.Text = result.ToString();//la fonction transforme le resultat avec des caracteres 
+                    break;//arreter
             }
         }
 
-        private void BTN_clear_Click(object sender, RoutedEventArgs e)
+        private void BTN_clear_Click(object sender, RoutedEventArgs e)//partie ou nous avons pas besoin d'interaction physique pour que ca marche
         {
-            TB_Display.Text = "0";
+            TB_Display.Text = "0";//la fonction display prend la valeur 0
         }
 
-        public void display(string num)
+        public void display(string num)//partie interaction physique avec la machine 
         {
-            if (TB_Display.Text == "0")
+            if (TB_Display.Text == "0")//si la fonction display est egale a 0 alors 
             {
-                TB_Display.Text = num;
+                TB_Display.Text = num;//la fonction va prendre la valeur num
             }
-            else
+            else//sinon
             {
-                TB_Display.Text = TB_Display.Text + num;
+                TB_Display.Text = TB_Display.Text + num;// la fonction display prend la valeur de la fonction plus num
             }
         }
 
